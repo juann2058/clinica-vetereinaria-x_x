@@ -11,7 +11,9 @@ do {
     System.out.println("4. cumpleaños");
     System.out.println("5. mostrar informacion final mascota");
     opcion = teclado.nextInt();
-    switch (opcion)
+    switch (opcion){
+
+    }
 }
 
 
