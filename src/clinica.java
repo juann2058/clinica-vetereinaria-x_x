@@ -93,7 +93,7 @@ public class clinica {
 
 
 
-    public void vacu(){
+    public void Vacuna(){
         if(!Vacuna) {
             Vacuna = true;
             System.out.println("la mascota fue vacunada");

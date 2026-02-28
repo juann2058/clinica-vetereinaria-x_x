@@ -69,6 +69,9 @@ do {
                 }
             }
             System.out.println(prod1.toString());
+
+
+            int submenu;
             do {
                 System.out.println("""
                 selecciones la actividad que desea realizar
@@ -77,21 +80,27 @@ do {
                 3. el therian cumplio años (‾◡◝)
                 """);
 
-                op = teclado.nextInt();
+                submenu = teclado.nextInt();
 
-                switch (op){
+                switch (submenu){
                     case 1:
                         System.out.println("se alimento la mascota");
+                        double cantidad = teclado.nextDouble();
+                        prod1.alimentar(cantidad);
                         break;
                     case 2:
+                        prod1.Vacuna();
                         System.out.println("se vacuna la mascota");
                         break;
                     case 3:
+                        prod1.cumplirannos();
                         System.out.println("su therian a cumplido años");
                         break;
                     case 4:
-                        System.out.println();
-                        break;
+                        System.out.println("regresando....");
+
+                    default:
+                        System.out.println("opcion invalida");
 
                 }
 
