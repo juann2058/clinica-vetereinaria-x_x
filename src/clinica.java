@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class clinica {
 
 
@@ -14,11 +16,11 @@ public class clinica {
 
 
     public clinica(String nomMascota, String especie, double peso, double edad, boolean vacuna) {
-        NomMascota = nomMascota;
-        Especie = especie;
-        Peso = peso;
-        Edad = edad;
-        Vacuna = false;
+        this.NomMascota = nomMascota;
+        this.Especie = especie;
+        this.Peso = peso;
+        this.Edad = edad;
+        this.Vacuna = false;
     }
 
 
@@ -79,4 +81,52 @@ public class clinica {
                 ", Vacuna=" + Vacuna +
                 '}';
     }
+
+
+
+
+
+    //////////////////////////////////////////////////////////////
+
+
+
+
+
+
+    public void vacu(){
+        if(!Vacuna) {
+            Vacuna = true;
+            System.out.println("la mascota fue vacunada");
+        }
+        else {
+            System.out.println("ya esta vacunado");
+        }
+    }
+
+
+    public void alimentar (double cantidad){
+        if (cantidad >0){
+            Peso += cantidad;
+            System.out.println("ha sido alimentado");
+        }else {
+            System.out.println("no se permiten cantidades negativas");
+        }
+    }
+
+    public void cumplirannos(){
+        Edad++;
+        System.out.println("la mascota acaba de cumplir" + Edad + "años");
+    }
+
+    public void mostraInf (){
+        System.out.println("inf mascota");
+        System.out.println("nombre: " + NomMascota);
+        System.out.println("especie: " + Especie);
+        System.out.println("edad: " + Edad);
+        System.out.println("peso: " + Peso + "KG");
+        System.out.println("vacuna "+ Vacuna);
+
+    }
+
+
 }
